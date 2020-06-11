@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  apiConstants: {
+    API_DOMAIN: 'https://masglobal-movies.firebaseio.com',
+    API_MOCK: 'http://www.mocky.io/v2/5dc3c053300000540034757b',
+    ENV: 'dev'
+}
 };
 
 /*

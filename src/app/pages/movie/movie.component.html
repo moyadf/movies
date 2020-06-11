@@ -1,0 +1,44 @@
+<section class="wrapper">
+
+    <section class="movie-form-container">
+        <div class="movie-form">
+            <form (ngSubmit)="saveMovie( f )" #f="ngForm">
+
+                <div class="user-box">
+                    <input  type="text" 
+                            name="title"
+                            [class.is-invalid]="title.invalid && title.touched"
+                            [(ngModel)]="movie.title" 
+                            required 
+                            minlength="5"
+                            #title="ngModel">
+                    <label>Title: </label>
+                </div>
+
+                <small *ngIf="title.invalid && title.touched" class="text-danger">
+                    {{ titleValidation }}
+                </small>
+
+                <div class="user-box">
+                    <input type="text" [(ngModel)]="movie.description" name="description" required>
+                    <label>Description: </label>
+                </div>
+
+                <div class="user-box">
+                    <input  type="date"
+                            name="release"
+                            [(ngModel)]="movie.release"  
+                            required>
+                </div>
+
+                <label class="file" for="file"><i class="fas fa-images"></i> Choose Image </label>
+                <input id="file" type="file" accept="image/*" (change)="changeListener($event)" title="image" required>
+
+                <div class="save-movie">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</section>

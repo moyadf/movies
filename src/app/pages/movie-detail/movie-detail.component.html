@@ -1,0 +1,10 @@
+<section class="detail-container" *ngIf="movie">
+    <div class="img">
+        <img [src]="movie.image">
+    </div>
+    <div class="text">
+        <h1>{{movie.title}}</h1>
+        <p>{{movie.description}}</p>
+        <small>{{movie.release | date }}</small>
+    </div>
+</section>

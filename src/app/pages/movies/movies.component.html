@@ -1,0 +1,29 @@
+<section class="wrapper">
+    
+    <div class="add-movie">
+        <button class="button tooltip" routerLink="/movie/new" title="Add Movie">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <div class="spinner" *ngIf="loading"></div>
+    
+    <section class="movies-container main-wrap">
+        <div class="movies-container__card" *ngFor="let movie of movies">
+            <article>
+                <img height="450" [src]="movie.image" [title]="movie.title" [alt]="movie.title">
+
+                <div class="movies-container-card__text">
+                    <span>{{ movie.title }}</span>
+
+                    <div class="movies-container-card-text__button">
+                        <button class="button" title="Ver más" [routerLink]="['/movie', movie.id]">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>                          
+                    </div>
+                    
+                </div>
+            </article>
+        </div>
+    </section>
+</section>

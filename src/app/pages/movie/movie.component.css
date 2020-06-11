@@ -1,0 +1,209 @@
+.wrapper {
+  padding: 1em;
+	max-width: 1140px;
+	margin: auto;
+	width: 100%;
+	box-sizing: border-box;
+} 
+
+.movie-form .user-box {
+  position: relative;
+}
+
+.movie-form .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(255, 235, 235);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #413939;
+  outline: none;
+  background: transparent;
+}
+.movie-form .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(255, 235, 235);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.movie-form .user-box input:focus ~ label,
+.movie-form .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color:#ff0571;
+  font-size: 12px;
+}
+
+.movie-form form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ff0571;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.movie-form a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ff0571,
+              0 0 25px #ff0571,
+              0 0 50px #ff0571,
+              0 0 100px #ff0571;
+}
+
+.movie-form a span {
+  position: absolute;
+  display: block;
+}
+
+.movie-form a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff0571);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.movie-form a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ff0571);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.movie-form a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ff0571);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.movie-form a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ff0571);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label.file i {
+  display: block;
+  margin: 0 5px;
+}
+
+label.file {
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  background-color: #ff3d49;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+}
+
+label.file:hover {
+  background-color: #d72532;
+}
+
+.movie-form {
+  width: 100%;
+  padding: 1em;
+}
+
+.save-movie {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.save-movie button {
+  border-radius: 0;
+  border: none;
+  outline: no;
+  height: 50px;
+  width: 100px;
+  background-color: #ff3d49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s;
+}
+
+.save-movie button:hover {
+  background-color: #ff0571;
+}
+
+.text-danger {
+  color: red;
+  display: block;
+  margin-bottom: 20px;
+
+}
