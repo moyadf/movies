@@ -7,7 +7,7 @@ export const environment = {
 
   apiConstants: {
     API_DOMAIN: 'https://masglobal-movies.firebaseio.com',
-    API_MOCK: 'http://www.mocky.io/v2/5dc3c053300000540034757b',
+    API_MOCK: 'https://www.mocky.io/v2/5dc3c053300000540034757b',
     ENV: 'dev'
 }
 };
